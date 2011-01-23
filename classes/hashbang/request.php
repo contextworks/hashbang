@@ -26,7 +26,7 @@ class Hashbang_Request extends Kohana_Request {
 		// Get the instance
 		$instance = parent::instance($uri);
 
-		if (isset($redirect) AND ! Request::$is_ajax)
+		if (isset($redirect))
 		{
 			$instance->redirect($redirect, Request::$hashbang_redirect_code);
 		}
