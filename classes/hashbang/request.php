@@ -15,7 +15,7 @@ class Hashbang_Request extends Kohana_Request {
 				// Capture the hashbang
 				$redirect = $_GET['_escaped_fragment_'];
 
-				if (Request::$hashbang_include_get)
+				if (Request::$hashbang_redirect_get)
 				{
 					// Append all GET parameters and remove the hashbang
 					$redirect .= URL::query(array('_escaped_fragment_' => NULL));
